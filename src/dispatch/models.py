@@ -84,7 +84,7 @@ class ResourceBase(DispatchBase):
     def sanitize_weblink(cls, v):
         if v:
             if not validators.url(v):
-                raise ValueError("Weblink must be a valid url.")
+                raise ValueError(f"Weblink must be a valid url, got {v}")
         return v
 
 
